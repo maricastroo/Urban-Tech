@@ -1,0 +1,251 @@
+body{
+  background-color: rgb(23,24,29);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px; /* Increase the height of the nav bar */
+  background-color: #2b2b2b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+}
+
+nav ul li {
+  flex-grow: 1; /* Make each button occupy an equal amount of space */
+  margin-right: 0;
+  position: relative;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  transition: color 0.2s ease-in-out;
+  display: block;
+  padding: 0 205px; /* Add padding to the left and right of the buttons */
+  height: 200%;
+  line-height: 100px; /* Center the text vertically */
+  color: #b3b3b3;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+nav ul li:hover::after {
+  transform: scaleX(1);
+  background-color: #b3b3b3;
+}
+
+nav ul li:hover a {
+  color: #fff;
+}
+
+nav ul li:focus-within::after {
+  transform: scaleX(1);
+  background-color: #b3b3b3;
+}
+
+nav ul li:focus-within a {
+  color: #fff;
+}
+
+nav ul li:focus-within::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.1); /* Change this to a semi-transparent white color */
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+nav ul li:hover::before {
+  opacity: 1; /* Make the nav bar glint when the mouse is hovered over the button */
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  box-shadow: #ddd;
+}
+
+.card {
+  width: 85%;
+  background-color: rgb(39,38,40);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 10px 20px 0;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card h2 {
+  padding: 20px;
+  font-size: 1.5rem;
+  height:  30px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.card p {
+  padding: 20px;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.card a {
+  display: block;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card a:hover {
+  background-color: #444;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.dropdown-menu{
+  background-color: #2b2b2b;
+}
+
+.dropdown-item{
+  height: 75px;
+  margin-top: none;
+}
+
+input[type="text"],
+input[type="password"] {
+  background-color: #333;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0.7rem;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botao {
+  background-color: #b3b3b3;
+  border: none;
+  border-radius: 10px;
+  color: #181818ee;
+  font-size: 1.4rem;
+  padding: 0.7rem;
+  width: 100%;
+  cursor: pointer;
+}
+.botao:hover {
+  background-color: #fff;
+  color: #181818ee;
+}
+
+.valor{
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 250;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  text-decoration: none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.navbar-nav .dropdown-menu {
+  flex-direction: column;
+  margin-left: 10px;
+}
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+  
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  background-color: #2b2b2b;
+}
+
+p, th, td{
+  color: #fff;
+}
+

@@ -1,0 +1,37 @@
+<!-- home.html -->
+{% extends "base2.html" %}
+{% block content %}
+<div class="vertical-center">
+    <div class="container">
+        {% with messages = get_flashed_messages()%}
+            {% if messages %}
+                {{messages[0]}} 
+            {% endif%}
+        {% endwith%}
+    </div>
+</div>
+<div class="cards-container">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature Image">
+      <h2>SOBRE NÓS</h2>
+      <p></p>
+        <p>A UrbanTech Solutions é uma empresa inovadora que se especializou em gestão governamental de espaço público e lazer, além de implementação ativa de software e soluções com microprocessadores. Nossa missão é melhorar a qualidade de vida das comunidades urbanas, tornando-as mais eficientes, sustentáveis e atraentes. Com uma equipe de especialistas em tecnologia e gestão, trabalhamos em estreita colaboração com governos locais e empresas para desenvolver soluções personalizadas que atendam às necessidades específicas de cada comunidade. Nossa abordagem integrada combina a expertise em gestão de espaço público e lazer com a implementação de tecnologias inovadoras, como software de gerenciamento de parques e soluções de IoT com microprocessadores.
+
+          Nossa equipe de desenvolvedores de software trabalha arduamente para criar soluções personalizadas que atendam às necessidades específicas de cada cliente, desde a gestão de parques e jardins até a implementação de sistemas de iluminação inteligente. Além disso, nossa equipe de especialistas em gestão governamental trabalha em estreita colaboração com os governos locais para desenvolver políticas e estratégias que promovam o desenvolvimento sustentável e a qualidade de vida das comunidades urbanas.
+          
+          Em UrbanTech Solutions, estamos comprometidos em tornar as cidades mais inteligentes, mais eficientes e mais atraentes para os cidadãos. Nossa visão é criar um futuro mais sustentável e próspero para as gerações futuras.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1616642325314-fe17e194b380?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Technology Image">
+      <h2>SOBRE O PROJETO</h2>
+      <p></p>
+        <p>A UrbanTech Solutions está orgulhosa de anunciar o lançamento de seu mais recente projeto em parceria com o governo de Curitiba: a implementação de registradores de poluição sonora em parques e praças da cidade. Este projeto pioneiro visa melhorar a qualidade de vida dos cidadãos de Curitiba, tornando os espaços públicos mais saudáveis e agradáveis.
+
+          Com a instalação de nossos registradores de poluição sonora, os moradores e visitantes de Curitiba poderão acompanhar em tempo real a qualidade do ar e do som nos parques e praças da cidade. Isso permitirá que os cidadãos sejam mais conscientes da importância da manutenção dos espaços públicos e sejam capazes de tomar decisões informadas sobre como melhorar a qualidade de vida em sua comunidade.
+          
+          Nossa equipe de especialistas em tecnologia e gestão trabalhou em estreita colaboração com o governo de Curitiba para desenvolver uma solução personalizada que atenda às necessidades específicas da cidade. Os registradores de poluição sonora serão equipados com sensores de última geração e conectados à nossa plataforma de gerenciamento de dados, permitindo que os dados sejam coletados e analisados em tempo real.</p>
+    </div>
+  </div>
+{% endblock %}
+
+
